@@ -25,3 +25,41 @@ body { margin: 0; min-width: 320px; }
   opacity: .24;
   background: radial-gradient(circle at 18% 22%, white 0 6%, transparent 7%), radial-gradient(circle at 82% 20%, white 0 9%, transparent 10%), repeating-linear-gradient(135deg, transparent 0 20px, rgba(255,255,255,.28) 21px 22px);
 }
+
+/* Chuẩn hóa thẻ sản phẩm trong gian hàng tài liệu để dữ liệu dài không làm vỡ bố cục */
+.card-hover.group {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.card-hover.group > a {
+  flex: 0 0 auto;
+}
+.card-hover.group > div:last-child {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.card-hover.group > div:last-child > a {
+  min-height: 56px;
+  max-height: 56px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.card-hover.group > div:last-child > p {
+  min-height: 48px;
+  max-height: 48px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.card-hover.group > div:last-child > div:last-child {
+  margin-top: auto;
+  padding-top: 16px;
+}
+.card-hover.group .text-7xl {
+  line-height: 1;
+}
