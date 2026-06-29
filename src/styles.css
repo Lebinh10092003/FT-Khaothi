@@ -14,3 +14,14 @@ body { margin: 0; min-width: 320px; }
 .card-hover { transition: transform .2s ease, box-shadow .2s ease; }
 .card-hover:hover { transform: translateY(-3px); box-shadow: 0 18px 60px rgba(15, 23, 42, 0.10); }
 .exam-visual { min-height: 160px; }
+[class*="from-indigo-950"], [class*="from-sky-950"], [class*="from-emerald-950"], [class*="from-purple-950"], [class*="from-slate-950"], [class*="from-cyan-950"] {
+  position: relative;
+  overflow: hidden;
+}
+[class*="from-indigo-950"]::before, [class*="from-sky-950"]::before, [class*="from-emerald-950"]::before, [class*="from-purple-950"]::before, [class*="from-slate-950"]::before, [class*="from-cyan-950"]::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: .24;
+  background: radial-gradient(circle at 18% 22%, white 0 6%, transparent 7%), radial-gradient(circle at 82% 20%, white 0 9%, transparent 10%), repeating-linear-gradient(135deg, transparent 0 20px, rgba(255,255,255,.28) 21px 22px);
+}
