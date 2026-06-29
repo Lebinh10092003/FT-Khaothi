@@ -9,5 +9,30 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      ;(() => {
+        const applyRegisterLabels = () => {
+          const path = window.location.pathname
+          const isTargetPage = path === '/FT-Khaothi/' || path === '/FT-Khaothi' || path === '/' || path.endsWith('/ky-thi')
+          if (!isTargetPage) return
+          document.querySelectorAll('a, button, span').forEach((el) => {
+            const text = (el.textContent || '').trim()
+            if (text === 'Xem chi tiết' || text === 'Xem chi tiết →') {
+              el.textContent = text.endsWith('→') ? 'Đăng ký ngay →' : 'Đăng ký ngay'
+            }
+            if (el.tagName === 'A') {
+              const href = el.getAttribute('href') || ''
+              if (href.includes('/ky-thi/') && (el.textContent || '').includes('Đăng ký ngay')) {
+                el.setAttribute('href', '/FT-Khaothi/dang-ky')
+              }
+            }
+          })
+        }
+        window.addEventListener('load', applyRegisterLabels)
+        setTimeout(applyRegisterLabels, 300)
+        setTimeout(applyRegisterLabels, 1000)
+        new MutationObserver(applyRegisterLabels).observe(document.documentElement, { childList: true, subtree: true })
+      })()
+    </script>
   </body>
 </html>
