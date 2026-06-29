@@ -42,63 +42,119 @@ header a:first-child > div:first-child::before {
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='8' fill='%232563eb'/%3E%3Ccircle cx='32' cy='13' r='8' fill='%232563eb'/%3E%3Ccircle cx='32' cy='51' r='8' fill='%232563eb'/%3E%3Ccircle cx='13' cy='32' r='8' fill='%232563eb'/%3E%3Ccircle cx='51' cy='32' r='8' fill='%232563eb'/%3E%3Ccircle cx='19' cy='19' r='6' fill='%231d4ed8'/%3E%3Ccircle cx='45' cy='19' r='6' fill='%231d4ed8'/%3E%3Ccircle cx='19' cy='45' r='6' fill='%231d4ed8'/%3E%3Ccircle cx='45' cy='45' r='6' fill='%231d4ed8'/%3E%3Ccircle cx='32' cy='32' r='4' fill='white'/%3E%3C/svg%3E") center / contain no-repeat;
 }
 
-/* Sửa lỗi giao diện trang tra cứu điểm */
+/* Sửa triệt để giao diện trang tra cứu điểm */
 main section[class*="bg-[#f5f8ff]"] {
   min-height: calc(100vh - 88px);
-  background: linear-gradient(180deg, #f5f8ff 0%, #ffffff 100%) !important;
+  background: linear-gradient(180deg, #f4f7ff 0%, #ffffff 72%, #f8fafc 100%) !important;
+  overflow: visible !important;
 }
 main section[class*="bg-[#f5f8ff]"] > div:first-child {
-  height: 260px !important;
-  border-bottom-left-radius: 42px;
-  border-bottom-right-radius: 42px;
+  height: 380px !important;
+  border-bottom-left-radius: 46px;
+  border-bottom-right-radius: 46px;
+  background: linear-gradient(120deg, #1d4ed8 0%, #2563eb 48%, #0ea5e9 100%) !important;
 }
 main section[class*="bg-[#f5f8ff]"] > div.relative {
-  padding-top: 56px !important;
-  padding-bottom: 72px !important;
+  padding-top: 48px !important;
+  padding-bottom: 80px !important;
+}
+main section[class*="bg-[#f5f8ff]"] .mb-8.text-center.text-white {
+  margin-bottom: 32px !important;
+  color: #ffffff !important;
+}
+main section[class*="bg-[#f5f8ff]"] .mb-8.text-center.text-white h1 {
+  margin-top: 16px !important;
+  color: #ffffff !important;
+  font-size: clamp(38px, 5vw, 58px) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.03em !important;
+  text-shadow: 0 14px 40px rgba(15, 23, 42, 0.22);
+}
+main section[class*="bg-[#f5f8ff]"] .mb-8.text-center.text-white p {
+  color: rgba(255, 255, 255, 0.92) !important;
+  opacity: 1 !important;
+}
+main section[class*="bg-[#f5f8ff]"] .mb-8.text-center.text-white p:last-child {
+  max-width: 740px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 main section[class*="bg-[#f5f8ff]"] .max-w-3xl {
   max-width: 760px !important;
 }
 main section[class*="bg-[#f5f8ff]"] .shadow-soft {
-  border-radius: 28px !important;
+  margin-top: 18px !important;
+  border-radius: 30px !important;
   border: 1px solid rgba(226, 232, 240, 0.95) !important;
   background: #ffffff !important;
-  box-shadow: 0 24px 80px rgba(15, 23, 42, 0.14) !important;
+  box-shadow: 0 28px 90px rgba(15, 23, 42, 0.16) !important;
   overflow: hidden !important;
 }
 main section[class*="bg-[#f5f8ff]"] .shadow-soft > div:first-child {
   margin: -24px -24px 0 -24px;
-  padding: 24px 32px !important;
+  padding: 26px 34px !important;
   background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
 }
+main section[class*="bg-[#f5f8ff]"] .shadow-soft > div:first-child h2 {
+  color: #020617 !important;
+  font-size: 28px !important;
+  line-height: 1.25 !important;
+}
+main section[class*="bg-[#f5f8ff]"] .shadow-soft > div:first-child p {
+  color: #475569 !important;
+}
 main section[class*="bg-[#f5f8ff]"] .shadow-soft > div:last-child {
-  padding: 28px 32px 32px !important;
+  padding: 30px 34px 34px !important;
 }
 main section[class*="bg-[#f5f8ff]"] label span {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 9px;
+  color: #0f172a !important;
+  font-weight: 800 !important;
 }
 main section[class*="bg-[#f5f8ff]"] select,
 main section[class*="bg-[#f5f8ff]"] input {
   min-height: 52px;
   font-size: 14px;
+  color: #0f172a !important;
 }
 main section[class*="bg-[#f5f8ff]"] select,
 main section[class*="bg-[#f5f8ff]"] label > div {
   border-radius: 16px !important;
-  border-color: #dbe3ef !important;
+  border: 1px solid #dbe3ef !important;
   background-color: #ffffff !important;
+  box-shadow: 0 1px 0 rgba(15, 23, 42, 0.03);
+}
+main section[class*="bg-[#f5f8ff]"] select:focus,
+main section[class*="bg-[#f5f8ff]"] label > div:focus-within {
+  border-color: #2563eb !important;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12) !important;
 }
 main section[class*="bg-[#f5f8ff]"] button {
-  min-height: 56px;
+  min-height: 58px;
   border-radius: 16px !important;
+  font-size: 16px !important;
 }
 main section[class*="bg-[#f5f8ff]"] .bg-blue-50 {
   border: 1px solid #bfdbfe;
+  color: #1e40af !important;
 }
 @media (max-width: 768px) {
+  main section[class*="bg-[#f5f8ff]"] > div:first-child {
+    height: 360px !important;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
   main section[class*="bg-[#f5f8ff]"] > div.relative {
-    padding-top: 36px !important;
+    padding-top: 34px !important;
+    padding-bottom: 54px !important;
+  }
+  main section[class*="bg-[#f5f8ff]"] .mb-8.text-center.text-white h1 {
+    font-size: 38px !important;
+  }
+  main section[class*="bg-[#f5f8ff]"] .shadow-soft {
+    margin-top: 10px !important;
+    border-radius: 24px !important;
   }
   main section[class*="bg-[#f5f8ff]"] .shadow-soft > div:first-child {
     margin: -24px -24px 0 -24px;
